@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="jumbotron w-100">
+        <h1 class="display-4 text-center">{{title}}</h1>
+        <hr class="my-4">
+        <div class="wrapper text-center mb-5">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-secondary" (click)="showBarchart()">Bar Chart</button>
+                <button type="button" class="btn btn-secondary" (click)="showLinechart()">Line Chart</button>
+                <button type="button" class="btn btn-secondary" (click)="showPiechart()">Pie Chart</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="showBar">
+        <app-barchart *ngIf="chartData" [data]="chartData"></app-barchart>
+    </div>
+
+    <div *ngIf="showLine">
+        <app-linechart [data]="lineChartData"></app-linechart>
+    </div>
+
+    <div *ngIf="showPie">
+        <app-piechart [data]="pieChartData"></app-piechart>
+    </div>
+</div>
