@@ -108,14 +108,6 @@ export class SceneService {
       model.position.copy(position);
       model.scale.set(0.02, 0.02, 0.02);
 
-      // const animation = gltf.animations[0];
-
-      // const mixer = new AnimationMixer(model);
-      // this.mixers.push(mixer);
-
-      // const action = mixer.clipAction(animation);
-      // action.play();
-
       this.scene.add(model);
     }
 
